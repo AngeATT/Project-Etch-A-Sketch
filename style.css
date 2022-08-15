@@ -1,0 +1,30 @@
+*{
+    text-align: center;
+}
+#body{
+    display: flex;
+    justify-content: center;
+}
+
+#square-divs{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+    height: 480px;
+    justify-content: center;
+    align-items: center;
+}
+
+#clearBoutton{
+    width: 100px;
+    height: 20px;
+    background-color: rgb(28, 223, 230);
+    border-color: white;
+}
+
+.carre{
+    border-width: 0px;
+    background-color: rgb(73, 100, 122);
+    border-style: solid;
+}
