@@ -36,16 +36,28 @@ function initialise(entry_number){
     sizeValue.textContent  = `${sizeSlider.value}x${sizeSlider.value}`;
 }
 
+let couleur_random = rgb_generator;
+
 function color_cases(color){
-  
+
   tableau_de_divs.forEach(element => {
-  let couleur = color;
+    let couleur = color;
   element.addEventListener(
     'click',() =>{
-      console.log(couleur);
       element.style['background-color'] = couleur;}
                           )})
 }
+
+function rainbow_cases(){
+
+  tableau_de_divs.forEach(element => {
+  element.addEventListener(
+    'click',() =>{
+      element.style['background-color'] = rgb_generator();}
+                          )})
+}
+
+
 
 
 
@@ -76,9 +88,10 @@ function rgb_generator() {
   return `rgb(${value_1},${value_2},${value_3})`
 }
 
+
+
 mode_rainbow.addEventListener('click',() => {
-initialise();
-color_cases(rgb_generator());}
+color_cases(rainbow_cases());}
 )
 
 
