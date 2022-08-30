@@ -7,7 +7,9 @@ const sizeValue = document.querySelector('#sizeValue');
 const default_click_color = 'white';
 const default_color = "rgb(73, 100, 122)";
 
+const mode_normal = document.querySelector('#mode_normal');
 const mode_rainbow = document.querySelector('#mode_rainbow');
+const mode_disco = document.querySelector('#mode_disco');
 
 const delete_couleur = document.querySelector("#deleteColor");
 
@@ -41,10 +43,9 @@ let couleur_random = rgb_generator;
 function color_cases(color){
 
   tableau_de_divs.forEach(element => {
-    let couleur = color;
   element.addEventListener(
     'click',() =>{
-      element.style['background-color'] = couleur;}
+      element.style['background-color'] = color;}
                           )})
 }
 
@@ -56,11 +57,6 @@ function rainbow_cases(){
       element.style['background-color'] = rgb_generator();}
                           )})
 }
-
-
-
-
-
 
 
 initialise(default_size);
@@ -88,12 +84,18 @@ function rgb_generator() {
   return `rgb(${value_1},${value_2},${value_3})`
 }
 
-
-
 mode_rainbow.addEventListener('click',() => {
-color_cases(rainbow_cases());}
-)
+color_cases(rainbow_cases());})
 
+mode_normal.addEventListener('click',() =>{
+  color_cases('white');})
 
+mode_disco.addEventListener('click',() =>{
+  tableau_de_divs.forEach(element =>{
+    
+    let couleur = rgb_generator();
+    element.style['background-color'] =couleur;
+  })
+})
 
 
