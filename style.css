@@ -28,3 +28,7 @@
     background-color: rgb(73, 100, 122);
     border-style: solid;
 }
+
+.bouttonOnClick{
+    background-color: aqua;
+}

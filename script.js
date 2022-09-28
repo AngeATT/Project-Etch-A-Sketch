@@ -22,6 +22,11 @@ let tableau_de_divs = [];
 
 function initialise(entry_number){
     square_divs.replaceChildren();
+
+    var count_click_disco =0;
+    var count_click_normal=0;
+    var count_click_rainbow=0;
+
     var square_numbers = entry_number**2; 
     var square_size = 480/entry_number;
     for ( let j = 0 ; j < square_numbers ; j++ ){
@@ -90,12 +95,20 @@ color_cases(rainbow_cases());})
 mode_normal.addEventListener('click',() =>{
   color_cases('white');})
 
-mode_disco.addEventListener('click',() =>{
-  tableau_de_divs.forEach(element =>{
+ 
+
+
+mode_disco.addEventListener('click', ()=>{
+  mode_disco.classList.toggle('bouttonOnClick');
+  
+  
+    tableau_de_divs.forEach(element =>{
     
-    let couleur = rgb_generator();
-    element.style['background-color'] =couleur;
+      let couleur = rgb_generator();
+        element.style['background-color'] =couleur; 
+      
   })
+  
 })
 
 
