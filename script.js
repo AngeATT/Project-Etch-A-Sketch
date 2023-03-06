@@ -13,9 +13,6 @@ const mode_disco = document.querySelector('#mode_disco');
 
 const delete_couleur = document.querySelector("#deleteColor");
 
-
-
-
 let default_size = 16;
 let tableau_de_divs = [];
 

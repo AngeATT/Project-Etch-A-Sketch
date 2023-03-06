@@ -32,3 +32,9 @@
 .bouttonOnClick{
     background-color: aqua;
 }
+#body{
+    border-color: black;
+    border-width: 1px;
+    height: 485;
+    width: 485;
+}
